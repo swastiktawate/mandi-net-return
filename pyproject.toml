@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mandi-net-return"
+version = "0.1.0"
+description = "True net return maths for Indian mandi sales: sell today, hold, or travel to a better mandi"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Swastik Tawate" }]
+keywords = ["mandi", "agriculture", "net-return", "agmarknet", "india"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "build"]
+
+[project.urls]
+Homepage = "https://github.com/swastiktawate/mandi-net-return"
+Source = "https://github.com/swastiktawate/mandi-net-return"
+Issues = "https://github.com/swastiktawate/mandi-net-return/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
